@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Believe Coaching Institute - Best Coaching in Lucknow</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo i {
+            font-size: 2.2rem;
+            color: #ffd700;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        .cta-btn {
+            background: #ffd700;
+            color: #333;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(102,126,234,0.9), rgba(118,75,162,0.9)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f8f9fa" width="1200" height="600"/><circle fill="%23e3f2fd" cx="200" cy="150" r="80"/><circle fill="%23bbdefb" cx="900" cy="300" r="120"/><circle fill="%2390caf9" cx="600" cy="450" r="60"/></svg>');
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+		.slidr {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin:15px;
+}
+
+.slid-track {
+  display: flex;
+  width: calc(250px * 10); /* adjust based on images */
+  animation: scroll 20s linear infinite;
+}
+
+.slid {
+  width: 350px;
+  height: 250px;
+  margin: px;
+  flex-shrink: 0;
+}
+
+.slid img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 5));
+  }
+}
+
+/* Pause on hover */
+.slidr:hover .slid-track {
+  animation-play-state: paused;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .slid {
+    width: 180px;
+    height: 120px;
+  }
+}
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .service-card i {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 1.5rem;
+        }
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        /* Timings Section */
+        .timings {
+            padding: 80px 0;
+            background: white;
+        }
+        .timings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .timing-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .day {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .hours {
+            font-size: 1.1rem;
+        }
+		.sliedr {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slied-track {
+  display: flex;
+  width: calc(250px * 10); /* adjust based on images */
+  animation: scroll 20s linear infinite;
+}
+
+.slied {
+  width: 550px;
+  height: 150px;
+  margin: 15px;
+  flex-shrink: 0;
+}
+
+.slied img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 5));
+  }
+}
+
+/* Pause on hover */
+.slider:hover .slide-track {
+  animation-play-state: paused;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .slide {
+    width: 180px;
+    height: 120px;
+  }
+}
+        
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+		.faqheader{
+background: linear-gradient(to left, #1ecad3, #1aa7c7);
+padding: 20px 20px;
+text-align: center;
+color:white;
+margin:10px;
+}
+.containr{
+    width:90%;
+    margin:auto;
+    margin-top:40px;
+}
+
+.crd{
+    display:flex;
+    background:white;
+    margin-bottom:40px;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.profil-img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-right:30px;
+}
+
+.detail h2{
+    margin-top:0;
+    color:#7a3cff;
+}
+
+.section-titl{
+    color:#ff4e8a;
+    font-weight:bold;
+}
+
+.cntact{
+    margin-top:10px;
+    font-size:14px;
+}
+
+@mdia(max-width:768px){
+    .crd{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+
+    .profil-img{
+        margin-bottom:15px;
+        margin-right:0;
+    }
+}
+.slider {
+margin: 100px 0 0 200px;
+width: 50%;
+height: 400px;
+display: flex;
+justify-content: center;
+gap: 10px;
+}
+.slider img{
+width:10%;
+height:100%;
+object-fit:cover;
+border-radius:10px;
+border:2px solid rgba(255,255,0.68);
+transition:all ease-in-out 0.5s;
+}
+.slider img:hover{
+width:50%;
+}
+       .sliedr {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin:15px;
+}
+
+.slied-track {
+  display: flex;
+  width: calc(250px * 10); /* adjust based on images */
+  animation: scroll 20s linear infinite;
+}
+
+.slied {
+  width: 650px;
+  height: 250px;
+  margin: 5px;
+  flex-shrink: 0;
+}
+
+.slied img {
+  width: 100%;
+  height: 100%;
+  border-radius: px;
+  object-fit: cover;
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 5));
+  }
+}
+
+/* Pause on hover */
+.slidr:hover .slid-track {
+  animation-play-state: paused;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .slid {
+    width: 180px;
+    height: 120px;
+  }
+} 
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .contact-item {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .contact-item i {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+        .social-links a:hover {
+            transform: translateY(-5px) scale(1.1);
+        }
+        
+        /* Footer */
+        #black{
+    background-color:black;
+}
+.bottom{
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    color:white;
+}
+
+.info{
+    width: 35%
+}
+
+.info div{
+    margin-bottom: 20px;
+}
+
+.info strong{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.map{
+    width: 65%;
+}
+
+.map iframe{
+    width: 100%;
+    height: 250px;
+    border: none;
+}
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                Believe Coaching Institute
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#timings">Timings</a></li>
+                <li><a href="#contact">Contact</a></li>
+				<li><a href= "C:\xampp\htdocs\coaching-portal\regisster.html">register</a></li>
+            </ul>
+            <a href="#contact" class="cta-btn">Enroll Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Believe in Success</h1>
+            <p>Best Coaching Institute in Lucknow for Nursery to Class 12th | UP Board, CBSE & ICSE | Offline, Online & Home Tuition</p>
+            <a href="#contact" class="cta-btn" style="font-size: 1.2rem; padding: 15px 30px;">Join 200+ Successful Students</a>
+        </div>
+    </section>
+	<div class="slidr">
+  <div class="slid-track">
+
+    <!-- Images (repeat for infinite effect) -->
+    <div class="slid"><img src="C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 21.21.47.jpeg"></div>
+    <div class="slid"><img src="C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 21.21.49 (1).jpeg"></div>
+    <div class="slid"><img src="C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 21.21.50 (1).jpeg"></div>
+    <div class="slid"><img src= "C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 21.21.50 (2).jpeg" ></div>
+    <div class="slid"><img src= "C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 21.21.50.jpeg"></div>
+	 <div class="slid"><img src= "C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 21.21.59.jpeg"></div>
+
+
+    <!-- Duplicate same images for smooth infinite loop -->
+    <div class="slid"><img src="C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 21.21.47.jpeg"></div>
+    <div class="slid"><img src="C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 21.21.49 (1).jpeg"></div>
+    <div class="slid"><img src="C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 21.21.50 (1).jpeg"></div>
+    <div class="slid"><img src="C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 21.21.50 (2).jpeg" ></div>
+    <div class="slid"><img src= "C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 21.21.50.jpeg"></div>
+	 <div class="slid"><img src="C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 21.21.59.jpeg" ></div>
+
+
+  </div>
+</div>
+
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Offline Classes</h3>
+                    <p>Nursery to 12th (UP Board, CBSE, ICSE) in Hindi/English medium. Subjects: Maths, Science, English, Hindi, GK, SST, Physics, Chemistry, Commerce, Economics, Business Studies & Accountancy. Notes, tests, doubts clearing & personal attention.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Live Online Classes</h3>
+                    <p>Class 4th to 12th across India & abroad. Interactive classes with recorded lectures, PDF notes, assignments & weekly assessments. Flexible schedule with strong teacher guidance from home.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Home Tutors</h3>
+                    <p>Trained & verified tutors for Nursery to 12th. Personalized one-to-one teaching at home. Choose timing, subject & teaching style as per your child's learning needs.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fab fa-youtube"></i>
+                    <h3>YouTube Channel</h3>
+                    <p>Free educational videos & chapter-wise explanations. Watch anytime, clear concepts, practice questions & stay motivated for exams.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Study Room</h3>
+                    <p>Quiet, comfortable space with teacher support. Complete homework, revision & practice daily. Build consistency & discipline for better exam preparation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timings Section -->
+    <section id="timings" class="timings">
+        <div class="container">
+            <h2 class="section-title">Operating Hours</h2>
+            <div class="timings-grid">
+                <div class="timing-card">
+                    <div class="day">Monday - Thursday</div>
+                    <div class="hours">6–7:20 am | 3–10 pm</div>
+                </div>
+                <div class="timing-card">
+                    <div class="day">Friday</div>
+                    <div class="hours">6–7:20 am | 3–10 pm</div>
+                </div>
+                <div class="timing-card">
+                    <div class="day">Saturday</div>
+                    <div class="hours">6–7:20 am | 3–10 pm</div>
+                </div>
+                <div class="timing-card">
+                    <div class="day">Sunday</div>
+                    <div class="hours">Closed</div>
+                </div>
+                <div class="timing-card">
+                    <div class="day">Online Classes</div>
+                    <div class="hours">6–7:20 am (Daily)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+<div class="sliedr">
+  <div class="slied-track">
+
+    <!-- Images (repeat for infinite effect) -->
+    <div class="slied"><img src="C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 22.07.29.jpeg" ></div>
+    <div class="slied"><img src="C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 22.07.32.jpeg" ></div>
+    <div class="slied"><img src="C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 22.07.31 (1).jpeg" ></div>
+    <div class="slied"><img src= "C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 22.07.31.jpeg" ></div>
+    <div class="slied"><img src= "C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 22.07.30 (2).jpeg"></div>
+	 <div class="slied"><img src="C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 22.07.30 (1).jpeg"></div>
+	  <div class="slied"><img src="C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 22.07.30.jpeg"></div>
+
+
+    <!-- Duplicate same images for smooth infinite loop -->
+    <div class="slied"><img src="C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 22.07.29.jpeg"></div>
+    <div class="slied"><img src="C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 22.07.32.jpeg"></div>
+    <div class="slied"><img src="C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 22.07.31 (1).jpeg"></div>
+    <div class="slied"><img src="C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 22.07.31.jpeg" ></div>
+    <div class="slied"><img src= "C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 22.07.30 (2).jpeg"></div>
+	 <div class="slied"><img src= "C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 22.07.30 (1).jpeg"></div>
+	 <div class="slied"><img src="C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-25 at 22.07.30.jpeg" ></div>
+
+
+
+  </div>
+</div>
+
+
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Our Achievements</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>200+</h3>
+                    <p>Happy Students</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Nursery-12th</h3>
+                    <p>All Classes Covered</p>
+                </div>
+                <div class="stat-item">
+                    <h3>3 Boards</h3>
+                    <p>UP, CBSE, ICSE</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7 Support</h3>
+                    <p>Personal Attention</p>
+                </div>
+            </div>
+        </div>
+    </section>
+	<div class= "faqheader">
+    <h1>about us</h1>
+    
+</div>
+
+
+<div class="containr">
+
+<!-- Person 1 -->
+<div class="crd">
+<img src=  "C:\xampp\htdocs\coaching-portal\v.jpeg" class="profil-img">
+
+<div class="detail">
+<h2>Vivek Verma</h2>
+<p><b>Position:</b> Owner</p>
+
+<p class="section-titl">Working</p>
+<ul>
+<li>Digital Marketer</li>
+<li>Master Teacher of: Maths, Physics, Chemistry, Social Science</li>
+</ul>
+
+<p class="section-titl">Other Qualities</p>
+<ul>
+<li>Photographer</li>
+<li>Graphic Designer</li>
+</ul>
+
+<p><b>Experience:</b> 1 Year</p>
+
+<div class="cntact">
+<p><b>Phone:</b> +91 7380596891</p>
+<p><b>Email:</b> sachinvivekverma2002@gmail.com</p>
+</div>
+
+</div>
+</div>
+
+<!-- Person 2 -->
+<div class="crd">
+<img src=  "C:\xampp\htdocs\coaching-portal\A.jpg" class="profil-img">
+
+<div class="detail">
+<h2>Anubhav Mishra</h2>
+<p><b>Position:</b> Owner</p>
+
+<p class="section-titl">Working</p>
+<ul>
+<li>Manager</li>
+<li>Master Teacher of: English, Hindi</li>
+<li>Motivational Speaker</li>
+</ul>
+
+<p class="section-titl">Other Qualities</p>
+<ul>
+<li>Published Author</li>
+<li>Writer</li>
+<li>Poet</li>
+</ul>
+
+<p><b>Experience:</b> 1 Year</p>
+
+<div class="cntact">
+<p><b>Phone:</b> +91 8090925797</p>
+<p><b>Email:</b> anubhavamishra52087@gmail.com</p>
+</div>
+
+</div>
+</div>
+
+</div>
+<br><br>
+<br>
+<center>
+<div class = "slider">
+<img src= "C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-14 at 11.07.30.jpeg">
+<img src= "C:\xampp\htdocs\Coaching-portal\WhatsApp Image 2026-03-14 at 11.07.34.jpeg">
+<img src= "C:\xampp\htdocs\Coaching-portal\WhatsApp Image 2026-03-14 at 11.07.33.jpeg">
+<img src= "C:\xampp\htdocs\Coaching-portal\WhatsApp Image 2026-03-14 at 11.07.32.jpeg" >
+<img src= "C:\xampp\htdocs\Coaching-portal\WhatsApp Image 2026-03-14 at 11.07.31 (2).jpeg" >
+<img src= "C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-14 at 11.07.31 (1).jpeg">
+<img src= "C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-14 at 11.07.31.jpeg">
+<img src= "C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-14 at 11.07.34 (1).jpeg">
+<img src= "C:\xampp\htdocs\Coaching-portal\WhatsApp Image 2026-03-14 at 11.07.29.jpeg">
+<img src= "C:\xampp\htdocs\coaching-portal\WhatsApp Image 2026-03-14 at 11.07.28.jpeg">
+
+</div>
+</center>
+<br><br><br>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Address</h3>
+                    <p>Vednathpuram, Madiyaon<br>Lucknow, Uttar Pradesh</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p><a href="tel:8090123412" style="color: #333; text-decoration: none; font-weight: 600;">8090123412</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Available</h3>
+                    <p>Mon-Sat: 6AM-10PM<br>Sunday: Closed</p>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="black">
+<div class="bottom">
+    <div class="info">
+        <div>
+            <strong>📞 Phone</strong>
+            (+89) 54321 67890
+        </div>
+        <div>
+            <strong>✉ Email</strong>
+            institute@helpline.com
+        </div>
+        <div>
+            <strong>📍 Address</strong>
+            24/A Mount View, London<br>
+            United Kingdom 234567
+        </div>
+    </div>
+
+    <div class="map">
+        <iframe 
+            src="https://www.google.com/maps?q=london&output=embed">
+        </iframe>
+    </div>
+</div>
+</div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(102, 126, 234, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
